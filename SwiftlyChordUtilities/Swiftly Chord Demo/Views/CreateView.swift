@@ -13,8 +13,9 @@ struct CreateView: View {
     @Environment(ChordDisplayOptions.self) private var chordDisplayOptions
     /// The body of the `View`
     var body: some View {
+        @Bindable var chordDisplayOptions = chordDisplayOptions
         ScrollView {
-            CreateChordView()
+            CreateChordView(chordDisplayOptions: $chordDisplayOptions)
                 .padding()
         }
         .animation(.default, value: chordDisplayOptions.displayOptions)

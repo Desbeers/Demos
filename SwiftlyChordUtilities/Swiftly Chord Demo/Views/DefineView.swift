@@ -66,7 +66,7 @@ struct DefineView: View {
             chord = try? ChordDefinition(
                 definition: definition,
                 instrument: chordDisplayOptions.displayOptions.instrument,
-                status: .unknown
+                status: .unknownChord
             )
             status = chord == nil ? .empty : .ready
         }
